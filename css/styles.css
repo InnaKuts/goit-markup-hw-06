@@ -52,6 +52,12 @@ button {
   padding: 0 15px;
 }
 
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .header {
   border-bottom: 1px solid #e7e9fc;
   background-color: #ffffff;
@@ -204,6 +210,42 @@ button {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .services-list,
+  .team-list,
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .services-item,
+  .team-item,
+  .portfolio-item {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .portfolio-image,
+  .team-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-title,
+  .hero-button,
+  .services-title,
+  .portfolio-product-title,
+  .team-name {
+    text-align: center;
   }
 }
 
