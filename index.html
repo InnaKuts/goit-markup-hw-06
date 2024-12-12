@@ -24,30 +24,79 @@
           <a href="./index.html" class="header-logo"
             >Web<span class="logo-span">Studio</span></a
           >
+          <button class="menu-toggle" aria-label="Open menu">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
           <ul class="header-menu">
             <li>
               <a href="./index.html" class="header-link active">Studio</a>
             </li>
-            <li><a href="" class="header-link">Portfolio</a></li>
-            <li><a href="" class="header-link">Contacts</a></li>
+            <li><a href="#portfolio" class="header-link">Portfolio</a></li>
+            <li><a href="#contacts" class="header-link">Contacts</a></li>
           </ul>
         </nav>
         <address class="header-contacts">
           <ul class="contacts-list">
-            <li>
-              <a href="mailto:info@devstudio.com" class="contact-item"
-                >info@devstudio.com</a
-              >
+            <li class="contact-item">
+              <a href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
-            <li>
-              <a href="tel:+110001111111" class="contact-item"
-                >+11 (000) 111-11-11</a
-              >
+            <li class="contact-item">
+              <a href="tel:+110001111111">+11 (000) 111-11-11</a>
             </li>
           </ul>
         </address>
       </div>
     </header>
+
+    <!-- Mobile Menu-->
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">×</button>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="#studio" class="mobile-nav-link">Studio</a></li>
+          <li><a href="#portfolio" class="mobile-nav-link">Portfolio</a></li>
+          <li><a href="#contacts" class="mobile-nav-link">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-contacts">
+        <a href="tel:+110001111111" class="mobile-contact-item"
+          >+11 (000) 111-11-11</a
+        >
+        <a href="mailto:info@devstudio.com" class="mobile-contact-item"
+          >info@devstudio.com</a
+        >
+      </div>
+      <div class="mobile-social">
+        <a href="#" class="mobile-social-link"
+          ><img src="instagram-icon.svg" alt="Instagram"
+        /></a>
+        <a href="#" class="mobile-social-link"
+          ><img src="twitter-icon.svg" alt="Twitter"
+        /></a>
+        <a href="#" class="mobile-social-link"
+          ><img src="facebook-icon.svg" alt="Facebook"
+        /></a>
+        <a href="#" class="mobile-social-link"
+          ><img src="linkedin-icon.svg" alt="LinkedIn"
+        /></a>
+      </div>
+    </div>
+
+    <script>
+      const mobileMenu = document.querySelector('.mobile-menu');
+      const closeButton = document.querySelector('.mobile-menu-close');
+      const openMenuButton = document.querySelector('.menu-toggle'); // Кнопка открытия меню
+
+      openMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+      });
+
+      closeButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+      });
+    </script>
 
     <!-- Main Content -->
     <main>
