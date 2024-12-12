@@ -195,61 +195,6 @@ section {
   padding: 0;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .header-menu {
-    display: none;
-  }
-
-  .header-nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  section {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .services-list,
-  .team-list,
-  .portfolio-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-  }
-
-  .services-item,
-  .team-item,
-  .portfolio-item {
-    flex-basis: 100%;
-    text-align: center;
-  }
-
-  .portfolio-image,
-  .team-photo {
-    width: 100%;
-    height: auto;
-  }
-
-  .hero-title,
-  .hero-button,
-  .services-title,
-  .portfolio-product-title,
-  .team-name {
-    text-align: center;
-  }
-}
-
-/* Mobile Menu Styles*/
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -652,16 +597,26 @@ section {
 
 .footer .container {
   display: flex;
-  align-items: baseline;
-  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-desc,
+.footer-social,
+.footer-subscribe {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
 }
 
 .footer-desc {
-  margin-right: 120px;
+  text-align: left;
 }
 
 .footer-logo {
-  display: inline-block;
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -748,8 +703,9 @@ section {
 }
 
 .subscribe-form-input {
+  flex: 1;
+  max-width: 200px;
   height: 40px;
-  min-width: 264px;
   border-radius: 4px;
   border-radius: 4px;
   border: 1px solid #ffffff;
@@ -775,6 +731,7 @@ section {
 }
 
 .subscribe-form-button {
+  min-width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1075,4 +1032,91 @@ input[name='user-privacy']:focus + .contact-form-checkbox-label .checkbox-icon {
 
 .contact-form-button:hover {
   background-color: #404bbf;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .header-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .services-list,
+  .team-list,
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .services-item,
+  .team-item,
+  .portfolio-item {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .portfolio-image,
+  .team-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-title,
+  .hero-button,
+  .services-title,
+  .portfolio-product-title,
+  .team-name {
+    text-align: center;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-desc,
+  .footer-social,
+  .footer-subscribe {
+    flex: none;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 16px;
+  }
+
+  .footer-social-row {
+    justify-content: center;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .subscribe-form-input,
+  .subscribe-form-button {
+    max-width: 100%;
+  }
 }
