@@ -588,6 +588,7 @@ section {
   width: 100%;
   background: white;
   z-index: 2;
+  text-align: start;
 }
 
 .portfolio-product-title {
@@ -1058,47 +1059,7 @@ input[name='user-privacy']:focus + .contact-form-checkbox-label .checkbox-icon {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1158px) {
-  .services-list,
-  .team-list,
-  .portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    width: 100%;
-  }
-
-  .services-item,
-  .team-item,
-  .portfolio-item {
-    flex-basis: calc((100% - 24px) / 2);
-  }
-
-  .footer .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .footer-desc,
-  .footer-social,
-  .footer-subscribe {
-    max-width: 50%;
-    flex-basis: calc((100% - 20px) / 2);
-    justify-items: center;
-  }
-}
-
-@media (min-width: 1158px) {
-  .container {
-    width: 1158px;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   html,
   body {
     margin: 0;
@@ -1154,7 +1115,6 @@ input[name='user-privacy']:focus + .contact-form-checkbox-label .checkbox-icon {
   .hero-title,
   .hero-button,
   .services-title,
-  .portfolio-product-title,
   .team-name {
     text-align: center;
   }
@@ -1193,5 +1153,80 @@ input[name='user-privacy']:focus + .contact-form-checkbox-label .checkbox-icon {
 
   .subscribe-form-button {
     max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1158px) {
+  .services-list,
+  .team-list,
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .services-item,
+  .team-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .portfolio-item {
+    flex-basis: calc((100% - 24px) / 2);
+    text-align: start;
+  }
+
+  .services-title {
+    text-align: start;
+  }
+
+  .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .footer-desc,
+  .footer-social,
+  .footer-subscribe {
+    max-width: 50%;
+    flex-basis: calc((100% - 20px) / 2);
+    justify-items: center;
+  }
+}
+
+@media (min-width: 1158px) {
+  .container {
+    width: 1158px;
+  }
+}
+
+@media (max-width: 1158px) {
+  .services-item {
+    text-align: start;
+  }
+
+  .services-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+  }
+
+  .services-item-icon-container {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    border: 0;
   }
 }
